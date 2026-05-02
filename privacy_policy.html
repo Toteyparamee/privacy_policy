@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>นโยบายความเป็นส่วนตัว — klasa app</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Sukhumvit Set", "Noto Sans Thai", sans-serif;
+      line-height: 1.7;
+      color: #212121;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+      background: #fafafa;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 4px;
+      color: #E53935;
+    }
+
+    .updated {
+      color: #757575;
+      font-size: 13px;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 36px;
+      padding-top: 16px;
+      border-top: 1px solid #e0e0e0;
+      color: #424242;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-top: 20px;
+      color: #424242;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      border: 1px solid #e0e0e0;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f5f5f5;
+      font-weight: 600;
+    }
+
+    a {
+      color: #E53935;
+    }
+
+    .contact-box {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .lang-toggle {
+      text-align: right;
+      margin-bottom: 16px;
+    }
+
+    .lang-toggle a {
+      text-decoration: none;
+      color: #757575;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="lang-toggle">
+    <a href="#en">English</a>
+  </div>
+
+  <h1>นโยบายความเป็นส่วนตัว</h1>
+  <p class="updated">มีผลบังคับใช้: 1 พฤษภาคม 2569 (อัปเดตล่าสุด: 1 พฤษภาคม 2569)</p>
+
+  <p>
+    klasa app ("แอป", "เรา") ให้ความสำคัญกับความเป็นส่วนตัวของผู้ใช้
+    เอกสารนี้อธิบายว่าเราเก็บข้อมูลใดบ้าง ใช้เพื่ออะไร และผู้ใช้มีสิทธิ์อย่างไร
+  </p>
+
+  <h2>1. ผู้ควบคุมข้อมูล (Data Controller)</h2>
+  <p>
+    <strong>โรงเรียนในที่ร่วมโครงการ klasa app</strong> เป็นผู้ควบคุมข้อมูลส่วนบุคคลของผู้ใช้ที่ใช้แอปนี้
+    สำหรับติดต่อเรื่องข้อมูลส่วนบุคคล โปรดดูช่องทางติดต่อท้ายเอกสาร
+  </p>
+
+  <h2>2. ข้อมูลที่เราเก็บรวบรวม</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ประเภท</th>
+        <th>รายละเอียด</th>
+        <th>วัตถุประสงค์</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ข้อมูลโปรไฟล์</td>
+        <td>ชื่อ–นามสกุล, อีเมล, รหัสนักเรียน/รหัสครู, ห้องเรียน, โรงเรียน</td>
+        <td>ยืนยันตัวตน, แสดงโปรไฟล์, จัดกลุ่มตามโรงเรียน</td>
+      </tr>
+      <tr>
+        <td>ข้อมูลรับรองความปลอดภัย</td>
+        <td>รหัสผ่าน (เก็บเฉพาะ hash), JWT token, Refresh token</td>
+        <td>เข้าสู่ระบบและรักษา session</td>
+      </tr>
+      <tr>
+        <td>ตำแหน่งที่ตั้ง (precise location)</td>
+        <td>ละติจูด/ลองจิจูด, ความแม่นยำ, ระดับแบตเตอรี่</td>
+        <td>
+          เฉพาะระหว่างเหตุฉุกอาทิเช่น เหตุอัคคีภัย,ธรณีพิบัติภัยเเละเหตุก่อการร้าย ที่ครู/รปภ.กดแจ้ง
+          เพื่อให้เจ้าหน้าที่ค้นหาผู้ใช้ — ส่งทุก 10 วินาทีจนกว่าเหตุจะคลี่คลาย
+        </td>
+      </tr>
+      <tr>
+        <td>รูปภาพ</td>
+        <td>รูปโปรไฟล์, รูปหลักฐานใบลา, รูปประกอบการตัดคะแนน</td>
+        <td>แสดงในโปรไฟล์, ประกอบการอนุมัติใบลา/ตัดคะแนน</td>
+      </tr>
+      <tr>
+        <td>ข้อมูลกิจกรรม</td>
+        <td>ประวัติการเช็คชื่อ, คะแนนพฤติกรรม, ใบลา</td>
+        <td>บริหารจัดการการเรียนการสอน</td>
+      </tr>
+      <tr>
+        <td>FCM Device Token</td>
+        <td>token แจ้งเตือนของ Firebase</td>
+        <td>ส่ง push notification เมื่อเกิดเหตุฉุกเฉิน</td>
+      </tr>
+      <tr>
+        <td>ข้อมูลการใช้งาน (Analytics)</td>
+        <td>หน้าจอที่เปิด, ระยะเวลาใช้งาน, รุ่นอุปกรณ์, OS version</td>
+        <td>วิเคราะห์ภาพรวมการใช้งานเพื่อปรับปรุงแอป (ผ่าน Firebase Analytics)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>ข้อมูลที่เรา <em>ไม่</em> เก็บ</h3>
+  <ul>
+    <li>ไม่เก็บรายการติดต่อ (contacts), SMS, ปฏิทิน</li>
+    <li>ไม่ติดตามผู้ใช้ข้ามแอป (no tracking, ไม่มี Tracking domains)</li>
+    <li>ไม่ขายหรือเช่าข้อมูลให้บุคคลที่สาม</li>
+  </ul>
+
+  <h2>3. ฐานทางกฎหมายในการประมวลผล</h2>
+  <ul>
+    <li><strong>การปฏิบัติตามสัญญา</strong> — ให้บริการระบบจัดการการเรียนการสอนตามสัญญากับโรงเรียน</li>
+    <li><strong>ความยินยอม</strong> — ตำแหน่งที่ตั้งระหว่างเหตุฉุกเฉิน, การส่ง push notification</li>
+    <li><strong>ประโยชน์อันชอบธรรม</strong> — Analytics รวมแบบไม่ระบุตัวตนเพื่อปรับปรุงคุณภาพแอป</li>
+    <li><strong>ความปลอดภัยที่สำคัญ</strong> —
+      ตำแหน่งที่ตั้งตอนเหตุฉุกเฉินใช้เพื่อค้นหาผู้ใช้ในกรณีไฟไหม้/แผ่นดินไหว/ผู้บุกรุก</li>
+  </ul>
+
+  <h2>4. การแชร์ข้อมูลกับบุคคลที่สาม</h2>
+  <p>เราไม่ขายข้อมูล แต่ใช้ผู้ให้บริการดังนี้เพื่อให้แอปทำงานได้:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>ผู้ให้บริการ</th>
+        <th>ใช้ทำอะไร</th>
+        <th>ข้อมูลที่ส่งไป</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Google Firebase (Cloud Messaging)</td>
+        <td>ส่ง push notification</td>
+        <td>FCM device token, payload การแจ้งเตือน</td>
+      </tr>
+      <tr>
+        <td>Google Firebase (Analytics)</td>
+        <td>สถิติการใช้งานรวม</td>
+        <td>หน้าจอที่เปิด, รุ่นอุปกรณ์, ไม่มีข้อมูลที่ระบุตัวตน</td>
+      </tr>
+      <tr>
+        <td>Gmail SMTP</td>
+        <td>ส่งอีเมลรีเซ็ตรหัสผ่าน</td>
+        <td>อีเมลผู้ใช้, ลิงก์รีเซ็ต</td>
+      </tr>
+      <tr>
+        <td>OpenStreetMap</td>
+        <td>แสดงแผนที่ในเว็บ admin</td>
+        <td>ไม่ส่งข้อมูลส่วนบุคคล (เฉพาะแสดง tile)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    ผู้ให้บริการเหล่านี้มีนโยบายความเป็นส่วนตัวของตัวเอง:
+    <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>,
+    <a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a>
+  </p>
+
+  <h2>5. ระยะเวลาเก็บข้อมูล</h2>
+  <ul>
+    <li><strong>ข้อมูลโปรไฟล์</strong> — ตลอดที่บัญชียัง active หรือจนกว่าผู้ใช้จะลบบัญชี</li>
+    <li><strong>ตำแหน่งที่ตั้งฉุกเฉิน</strong> — ระหว่างเหตุการณ์เก็บใน Redis (ลบหลังเหตุจบ); สรุปบันทึกเหตุการณ์เก็บไว้
+      1 ปี</li>
+    <li><strong>JWT/Refresh token</strong> — Access token หมดอายุ 1 ชั่วโมง; Refresh token 7 วัน</li>
+    <li><strong>Reset password token</strong> — 30 นาที</li>
+    <li><strong>Analytics</strong> — Firebase เก็บไม่เกิน 14 เดือน (ตั้งค่า default)</li>
+  </ul>
+
+  <h2>6. สิทธิของผู้ใช้</h2>
+  <ul>
+    <li><strong>เข้าถึง / แก้ไข</strong> — ดูและแก้ไขโปรไฟล์ผ่านหน้า "ข้อมูลส่วนตัว" ในแอป</li>
+    <li><strong>ลบบัญชี</strong> — ใน "โปรไฟล์ → ลบบัญชี" ระบบจะลบข้อมูลโปรไฟล์ + token + รูปอย่างถาวร</li>
+    <li><strong>ถอนความยินยอม</strong> — ปิด permission ตำแหน่ง/แจ้งเตือนได้ในตั้งค่า OS</li>
+    <li><strong>ขอสำเนาข้อมูล / ขอลบเฉพาะส่วน / ขอจำกัดการประมวลผล</strong> — ติดต่อตามช่องทางท้ายเอกสาร เราจะตอบใน 30
+      วัน</li>
+    <li><strong>ร้องเรียนต่อ สคส. (PDPC)</strong> — หากเห็นว่าเราละเมิด</li>
+  </ul>
+
+  <h2>7. ความปลอดภัยของข้อมูล</h2>
+  <ul>
+    <li>การสื่อสารทั้งหมดผ่าน HTTPS/TLS</li>
+    <li>รหัสผ่านเก็บเป็น bcrypt hash — ไม่เก็บ plaintext</li>
+    <li>JWT secret เก็บใน Kubernetes Secret แยกจากซอร์สโค้ด</li>
+    <li>ฐานข้อมูลแยกตาม service และจำกัดสิทธิ์การเข้าถึง</li>
+  </ul>
+
+  <h2>8. ผู้ใช้อายุต่ำกว่า 13 ปี</h2>
+  <p>
+    แอปนี้ออกแบบมาเพื่อใช้งานในโรงเรียน ผู้ใช้อายุต่ำกว่า 13 ปีต้องได้รับความยินยอมจากผู้ปกครอง
+    โรงเรียนเป็นผู้ดูแลขั้นตอนการขอความยินยอมตามสัญญาที่ทำกับเรา
+  </p>
+
+  <h2>9. การเปลี่ยนแปลงนโยบาย</h2>
+  <p>
+    เราอาจอัปเดตนโยบายนี้เมื่อมีการเปลี่ยนแปลงสำคัญ จะแจ้งผ่านหน้าแอปและอัปเดตวันที่ด้านบน
+    หากเปลี่ยนวัตถุประสงค์การใช้ข้อมูลที่ต้องขอความยินยอมใหม่ จะขอความยินยอมก่อนใช้
+  </p>
+
+  <h2>10. ติดต่อเรา</h2>
+  <div class="contact-box">
+    <strong>โรงเรียนศรีโสภณ</strong><br>
+    อีเมล: <a href="mailto:klasa.kpinnovative@gmail.com">klasa.kpinnovative@gmail.com</a><br>
+    เว็บไซต์: <a href="https://api.klasaapp.com">api.klasaapp.com</a><br>
+    <br>
+    สำหรับเรื่องข้อมูลส่วนบุคคล กรุณาระบุหัวข้ออีเมลว่า "PDPA Request"
+  </div>
+
+  <hr style="margin: 60px 0 24px; border: 0; border-top: 1px solid #e0e0e0;">
+
+  <!-- ============ ENGLISH VERSION ============ -->
+  <a id="en"></a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective: May 1, 2026 (Last updated: May 1, 2026)</p>
+
+  <p>
+    klasa app ("the app", "we") respects the privacy of its users.
+    This document explains what data we collect, how it is used, and what rights users have.
+  </p>
+
+  <h2>1. Data Controller</h2>
+  <p>
+    <strong>Sri Sophon School</strong> is the controller of personal data for users of this app.
+    For matters related to personal data, please see the contact channels at the end of this document.
+  </p>
+
+  <h2>2. Data We Collect</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Profile data</td>
+        <td>First–last name, email, student/teacher code, classroom, school</td>
+        <td>Identity verification, profile display, grouping by school</td>
+      </tr>
+      <tr>
+        <td>Security credentials</td>
+        <td>Password (hash only), JWT token, Refresh token</td>
+        <td>Sign-in and session maintenance</td>
+      </tr>
+      <tr>
+        <td>Precise location</td>
+        <td>Latitude/longitude, accuracy, battery level</td>
+        <td>
+          Only during emergencies triggered by teachers/security,
+          so first responders can locate users — sent every 10 seconds until the incident is resolved
+        </td>
+      </tr>
+      <tr>
+        <td>Photos</td>
+        <td>Profile picture, leave-request evidence, behavior incident evidence</td>
+        <td>Display in profile, supporting leave-request approval / behavior records</td>
+      </tr>
+      <tr>
+        <td>Activity data</td>
+        <td>Attendance history, behavior scores, leave requests</td>
+        <td>Managing teaching and learning</td>
+      </tr>
+      <tr>
+        <td>FCM Device Token</td>
+        <td>Firebase notification token</td>
+        <td>Send push notifications during emergencies</td>
+      </tr>
+      <tr>
+        <td>Usage data (Analytics)</td>
+        <td>Screens viewed, session duration, device model, OS version</td>
+        <td>Analyze overall usage to improve the app (via Firebase Analytics)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Data we do <em>not</em> collect</h3>
+  <ul>
+    <li>We do not collect contacts, SMS, or calendar</li>
+    <li>We do not track users across apps (no tracking, no tracking domains)</li>
+    <li>We do not sell or rent data to third parties</li>
+  </ul>
+
+  <h2>3. Legal Basis for Processing</h2>
+  <ul>
+    <li><strong>Performance of contract</strong> — providing the school management system per the agreement with the school</li>
+    <li><strong>Consent</strong> — location during emergencies, sending push notifications</li>
+    <li><strong>Legitimate interest</strong> — aggregated, anonymized analytics to improve app quality</li>
+    <li><strong>Vital safety interest</strong> — location during emergencies is used to locate users in cases such as fire, earthquake, or intruder</li>
+  </ul>
+
+  <h2>4. Sharing Data with Third Parties</h2>
+  <p>We do not sell data, but use the following service providers to operate the app:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Provider</th>
+        <th>Used for</th>
+        <th>Data sent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Google Firebase (Cloud Messaging)</td>
+        <td>Sending push notifications</td>
+        <td>FCM device token, notification payload</td>
+      </tr>
+      <tr>
+        <td>Google Firebase (Analytics)</td>
+        <td>Aggregated usage statistics</td>
+        <td>Screens viewed, device model, no personally identifiable data</td>
+      </tr>
+      <tr>
+        <td>Gmail SMTP</td>
+        <td>Sending password reset emails</td>
+        <td>User email, reset link</td>
+      </tr>
+      <tr>
+        <td>OpenStreetMap</td>
+        <td>Displaying maps on the admin web</td>
+        <td>No personal data sent (only tile rendering)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    These providers have their own privacy policies:
+    <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>,
+    <a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a>
+  </p>
+
+  <h2>5. Data Retention</h2>
+  <ul>
+    <li><strong>Profile data</strong> — for as long as the account is active or until the user deletes the account</li>
+    <li><strong>Emergency location</strong> — kept in Redis during the incident (deleted after it ends); incident summaries are kept for 1 year</li>
+    <li><strong>JWT/Refresh token</strong> — Access token expires in 1 hour; Refresh token in 7 days</li>
+    <li><strong>Reset password token</strong> — 30 minutes</li>
+    <li><strong>Analytics</strong> — Firebase retains for up to 14 months (default setting)</li>
+  </ul>
+
+  <h2>6. Your Rights</h2>
+  <ul>
+    <li><strong>Access / Edit</strong> — view and edit your profile via the "Personal Info" page in the app</li>
+    <li><strong>Delete account</strong> — under "Profile → Delete Account"; the system will permanently delete profile data + tokens + photos</li>
+    <li><strong>Withdraw consent</strong> — disable location/notification permissions in OS settings</li>
+    <li><strong>Request a data copy / partial deletion / restriction of processing</strong> — contact us via the channels at the end of this document; we will respond within 30 days</li>
+    <li><strong>File a complaint with the PDPC</strong> — if you believe we have violated your rights</li>
+  </ul>
+
+  <h2>7. Data Security</h2>
+  <ul>
+    <li>All communication is over HTTPS/TLS</li>
+    <li>Passwords are stored as bcrypt hashes — no plaintext is kept</li>
+    <li>JWT secrets are stored in Kubernetes Secrets, separate from source code</li>
+    <li>Databases are separated by service with restricted access</li>
+  </ul>
+
+  <h2>8. Users Under 13</h2>
+  <p>
+    This app is designed for school use. Users under 13 require parental consent.
+    The school manages the consent process per our service agreement.
+  </p>
+
+  <h2>9. Policy Changes</h2>
+  <p>
+    We may update this policy when material changes occur. We will notify users via the app and update the date above.
+    If we change the purpose of data use in a way that requires renewed consent, we will request consent before such use.
+  </p>
+
+  <h2>10. Contact</h2>
+  <div class="contact-box">
+    <strong>Sri Sophon School</strong><br>
+    Email: <a href="mailto:klasa.kpinnovative@gmail.com">klasa.kpinnovative@gmail.com</a><br>
+    Website: <a href="https://api.klasaapp.com">api.klasaapp.com</a><br>
+    <br>
+    For personal data matters, please use the email subject line "PDPA Request".
+  </div>
+
+</body>
+
+</html>
